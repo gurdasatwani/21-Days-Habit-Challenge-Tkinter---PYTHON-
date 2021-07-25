@@ -11,7 +11,7 @@ c=count
 def Save():
 	global dr,c
 	if c==21:c=0
-	c+=1;data=open('save.py','w');data.write(f"count = {c}\nNum = str({dr[-c]})");data.close();label.config(text=str(dr[-c].zfill(2)))
+	c+=1;data=open('save.py','w');data.write(f"count = {c}\nNum = str({dr[-c]})");data.close();label.config(text=str(dr[-c].zfill(2)));exit()
 ask=Button(main,text='CHECK',bd=15,command=Save,bg=_A,fg=_B)
 ask.grid()
 main.mainloop()
