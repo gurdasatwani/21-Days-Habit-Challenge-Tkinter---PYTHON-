@@ -45,6 +45,7 @@ def Save():
     data.write(f"count = {c}\nNum = str({dr[-c]})")
     data.close()
     label.config(text=str(dr[-c].zfill(2)))
+    exit()
 
 
 ask = Button(main, text="CHECK", bd=15, command=Save, bg="black", fg="white")
