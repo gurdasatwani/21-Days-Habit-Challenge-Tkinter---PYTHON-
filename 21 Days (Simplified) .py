@@ -25,12 +25,12 @@ label = Label(
     main, text=Num.zfill(2), font=("Helvetica", 166, "bold"), fg="white", bg="black"
 )
 
-ask = Button(main, text="CHECK", bd=15, command=Save, bg="black", fg="white")
+ask = Button(main, bd=15,bg="black", fg="white")
 
 if str(date.today()) == today:
-    ask.config(state="normal")
+    ask.config(text="CHECK",command=Save)
 else:
-    ask.config(state="disable")
+    ask.config(text='EXIT',command=main.destroy)
 
 label.grid(pady=500)
 ask.grid()
