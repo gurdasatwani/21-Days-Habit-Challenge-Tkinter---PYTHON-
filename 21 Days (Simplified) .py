@@ -41,7 +41,7 @@ ask = Button(main, bd=15, bg="black", fg="white")
 if str(Date) == Today:
     ask.config(text="CHECK", command=Save)
 else:
-    messagebox.showinfo('PROGRESS',f"Check Days = {check}\nSkip Days = {skip}")
+    messagebox.showinfo('PROGRESS',f"Day  {str(check).zfill(2)}\nSkip {str(skip).zfill(2)}")
     ask.config(text="EXIT", command=main.destroy)
 
 label.grid(pady=500)
