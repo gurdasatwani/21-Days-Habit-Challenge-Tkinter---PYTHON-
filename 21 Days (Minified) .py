@@ -18,7 +18,7 @@ def Save():
 label=Label(main,text=Num.zfill(2),font=('Helvetica',169,'bold'),fg=_B,bg=_A)
 ask=Button(main,bd=15,bg=_A,fg=_B)
 if str(Date)==Today:ask.config(text='CHECK',command=Save)
-else:messagebox.showinfo('PROGRESS',f"Check Days = {check}\nSkip Days = {skip}");ask.config(text='EXIT',command=main.destroy)
+else:messagebox.showinfo('PROGRESS',f"Day  {str(check).zfill(2)}\nSkip {str(skip).zfill(2)}");ask.config(text='EXIT',command=main.destroy)
 label.grid(pady=500)
 ask.grid()
 main.mainloop()
